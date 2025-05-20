@@ -1,0 +1,214 @@
+/* === GLOBAL STYLE === */
+body {
+  margin: 0;
+  font-family: "Arial Black", sans-serif;
+  background-color: #ffffff;
+  background-image: url("image/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* === HALAMAN UTAMA === */
+body:not(.petunjuk-page) {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  color: #37c84a;
+  font-size: 2.5em;
+  text-shadow: 3px 3px #b9e44d;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #2ab84c;
+  font-size: 1.5em;
+  text-shadow: 2px 2px #86ce8d;
+  margin-bottom: 30px;
+}
+
+/* Tombol PETUNJUK */
+.btn-petunjuk {
+  background-color: #a4e343;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 40px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-petunjuk:hover {
+  transform: scale(1.1);
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* === HALAMAN PETUNJUK === */
+body.petunjuk-page {
+  display: block;
+  padding-top: 40px;
+}
+
+.judul-petunjuk {
+  font-size: 2.5em;
+  color: #a4e343;
+  text-shadow: 2px 2px #4b7323;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container {
+  max-width: 800px;
+  max-height: 300px; /* Atur tinggi agar bisa scroll */
+  overflow-y: auto; /* Menambahkan scroll vertikal */
+  margin: 0 auto;
+  background-color: rgba(0, 177, 18, 0.6); /* Efek transparan */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.petunjuk-page p {
+  font-size: 1em;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #000000;
+}
+
+.petunjuk-page ol {
+  text-align: left;
+  padding-left: 20px;
+  font-size: 1em;
+  color: #000000;
+}
+
+.petunjuk-page li {
+  margin-bottom: 10px;
+}
+
+/* Tombol KEMBALI */
+a.btn-kembali {
+  display: inline-block;
+  background-color: #f44336;
+  color: #fff;
+  border-radius: 30px;
+  padding: 12px 30px;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Menempatkan tombol di tengah dan di bawah kontainer */
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px; /* Memberikan jarak lebih dari kontainer */
+}
+
+a.btn-kembali:hover {
+  transform: scale(1.1);
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* === HALAMAN JENIS-JENIS TUMBUHAN PAKU === */
+body.jenis-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Memusatkan konten secara horizontal */
+  justify-content: flex-start; /* Menempatkan elemen di bagian atas */
+  padding-top: 50px; /* Memberikan ruang di atas untuk judul */
+  min-height: 100vh; /* Agar tinggi body selalu 100% dari tinggi layar */
+}
+
+.jenis-page h1 {
+  font-size: 2.5em;
+  color: #a4e343;
+  text-shadow: 2px 2px #4b7323;
+  text-align: center;
+  margin-bottom: 30px; /* Memberikan jarak antara judul dan tombol */
+  width: 100%; /* Pastikan elemen mengambil lebar penuh */
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-jenis {
+  display: inline-block;
+  background-color: #46e343;
+  color: #ffffff;
+  border-radius: 15px;
+  padding: 20px 40px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  width: 250px;
+}
+
+.btn-jenis:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* === RESPONSIF === */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .btn-jenis {
+    width: 200px;
+    padding: 15px 30px;
+    font-size: 1em;
+  }
+}
+
+/* RESPONSIF UNTUK PETUNJUK */
+@media (max-width: 600px) {
+  .petunjuk-page h1 {
+    font-size: 2em;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .btn-petunjuk,
+  .btn-kembali {
+    padding: 12px 25px;
+    font-size: 0.9em;
+  }
+
+  .petunjuk-page ol {
+    font-size: 0.95em;
+  }
+}
+
+@media (orientation: portrait) {
+  body {
+    background-size: cover;
+  }
+}
